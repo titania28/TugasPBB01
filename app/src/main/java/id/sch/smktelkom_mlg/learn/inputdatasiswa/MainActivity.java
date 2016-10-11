@@ -5,10 +5,13 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.RadioButton;
+import android.widget.RadioGroup;
 import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
     EditText etNama, etTahun, etAlamat;
+    RadioGroup rg;
     Button bOk;
     TextView tvHasil;
 
@@ -20,6 +23,7 @@ public class MainActivity extends AppCompatActivity {
         etNama = (EditText) findViewById(R.id.editTextNama);
         etTahun = (EditText) findViewById(R.id.editTextTahun);
         etAlamat = (EditText) findViewById(R.id.editTextAlamat);
+        rg = (RadioGroup) findViewById(R.id.radioGroup);
         bOk = (Button) findViewById(R.id.buttonOK);
 
         tvHasil = (TextView) findViewById(R.id.textViewHasil);
@@ -30,6 +34,8 @@ public class MainActivity extends AppCompatActivity {
                 doProcess();
             }
         });
+
+
     }
 
     private void doProcess() {
@@ -38,8 +44,14 @@ public class MainActivity extends AppCompatActivity {
             int tahun = Integer.parseInt(etTahun.getText().toString());
             int usia = 2016 - tahun;
             String alamat = etAlamat.getText().toString();
+            String hasil = null;
+            if (rg.getCheckedRadioButtonId() != -1) {
+                RadioButton rb = (RadioButton)
+                        findViewById(rg.getCheckedRadioButtonId());
+                hasil = rb.getText().toString();
+            }
             tvHasil.setText(nama + "\n Lahir Tahun : " + tahun + "\n berusia : " + usia
-                    + "\n Alamat : " + alamat
+                    + " \n Jurusan " + hasil + "\n Alamat : " + alamat
             );
         }
     }

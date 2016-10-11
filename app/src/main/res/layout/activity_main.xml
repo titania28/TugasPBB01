@@ -110,18 +110,19 @@
                 android:checked="false"
                 android:text="TKJ" />
 
-            <TextView
-                android:id="@+id/textViewJrs"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignBaseline="@+id/editTextThn"
-                android:layout_alignBottom="@+id/editTextThn"
-                android:layout_toEndOf="@+id/editTextThn"
-                android:layout_toRightOf="@+id/editTextThn"
-                android:text="Pilih Jurusan!"
-                android:textColor="@color/abc_btn_colored_borderless_text_material"
-                android:textStyle="bold" />
         </RadioGroup>
+
+        <TextView
+            android:id="@+id/textViewJrs"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/editTextThn"
+            android:layout_alignBottom="@+id/editTextThn"
+            android:layout_toEndOf="@+id/editTextThn"
+            android:layout_toRightOf="@+id/editTextThn"
+            android:text="Pilih Jurusan!"
+            android:textColor="@color/abc_btn_colored_borderless_text_material"
+            android:textStyle="bold" />
 
         <TextView
             android:id="@+id/textView5"
