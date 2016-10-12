@@ -229,7 +229,6 @@
             android:layout_toEndOf="@+id/editTextThn"
             android:layout_toRightOf="@+id/editTextThn"
             android:text="New Text"
-            android:textColor="@color/abc_background_cache_hint_selector_material_dark"
             android:textSize="14dp"
             android:textStyle="bold" />
     </LinearLayout>

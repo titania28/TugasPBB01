@@ -43,7 +43,7 @@ public class MainActivity extends AppCompatActivity {
         rg = (RadioGroup) findViewById(R.id.radioGroup);
         x = (CheckBox) findViewById(R.id.checkBoxX);
         xi = (CheckBox) findViewById(R.id.checkBoxXI);
-        xii = (CheckBox) findViewById(R.id.checkBoxXI);
+        xii = (CheckBox) findViewById(R.id.checkBoxXII);
         spProvinsi = (Spinner) findViewById(R.id.spinnerProv);
         spKota = (Spinner) findViewById(R.id.spinnerKota);
         bOk = (Button) findViewById(R.id.buttonOK);
@@ -93,7 +93,6 @@ public class MainActivity extends AppCompatActivity {
             if (x.isChecked()) hsl += x.getText() + "\n";
             if (xi.isChecked()) hsl += xi.getText() + "\n";
             if (xii.isChecked()) hsl += xii.getText() + "\n";
-
             if (hsl.length() == startlen) hsl += "Tidak ada pilihan";
             tvHasil.setText(" Data Siswa " + "\n Nama Siswa :" + nama + "\n Lahir Tahun : " + tahun + "\n berusia : " + usia
                     + " \n Jurusan " + hasil + "\n" + hsl
