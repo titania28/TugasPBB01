@@ -4,6 +4,7 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
+import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
@@ -12,6 +13,7 @@ import android.widget.TextView;
 public class MainActivity extends AppCompatActivity {
     EditText etNama, etTahun, etAlamat;
     RadioGroup rg;
+    CheckBox x, xi, xii;
     Button bOk;
     TextView tvHasil;
 
@@ -24,6 +26,9 @@ public class MainActivity extends AppCompatActivity {
         etTahun = (EditText) findViewById(R.id.editTextTahun);
         etAlamat = (EditText) findViewById(R.id.editTextAlamat);
         rg = (RadioGroup) findViewById(R.id.radioGroup);
+        x = (CheckBox) findViewById(R.id.checkBoxX);
+        xi = (CheckBox) findViewById(R.id.checkBoxXI);
+        xii = (CheckBox) findViewById(R.id.checkBoxXI);
         bOk = (Button) findViewById(R.id.buttonOK);
 
         tvHasil = (TextView) findViewById(R.id.textViewHasil);
@@ -50,8 +55,16 @@ public class MainActivity extends AppCompatActivity {
                         findViewById(rg.getCheckedRadioButtonId());
                 hasil = rb.getText().toString();
             }
+            String hsl = "Anda Menempati Kelas : ";
+            int startlen = hsl.length();
+            if (x.isChecked()) hsl += x.getText() + "\n";
+            if (xi.isChecked()) hsl += xi.getText() + "\n";
+            if (xii.isChecked()) hsl += xii.getText() + "\n";
+
+            if (hsl.length() == startlen) hsl += "Tidak ada pilihan";
             tvHasil.setText(nama + "\n Lahir Tahun : " + tahun + "\n berusia : " + usia
                     + " \n Jurusan " + hasil + "\n Alamat : " + alamat
+                    + "\n" + hsl
             );
         }
     }
