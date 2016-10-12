@@ -189,7 +189,8 @@
             android:layout_height="wrap_content"
             android:layout_alignParentLeft="true"
             android:layout_alignParentStart="true"
-            android:layout_below="@+id/spinnerKota" />
+            android:layout_below="@+id/spinnerKota"
+            android:entries="@array/provinsi" />
 
         <Spinner
             android:id="@+id/spinnerKota"
@@ -208,7 +209,8 @@
             android:layout_alignParentLeft="true"
             android:layout_alignParentRight="true"
             android:layout_alignParentStart="true"
-            android:layout_below="@+id/spinnerProv" />
+            android:layout_below="@+id/spinnerProv"
+            android:hint="Alamat Rumah" />
 
         <Button
             android:id="@+id/buttonOK"
@@ -220,18 +222,6 @@
             android:text="SAVE" />
 
         <TextView
-            android:id="@+id/textView6"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentBottom="true"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentStart="true"
-            android:text="HASIL"
-            android:textColor="@color/abc_background_cache_hint_selector_material_dark"
-            android:textSize="20dp"
-            android:textStyle="normal|bold" />
-
-        <TextView
             android:id="@+id/textViewHasil"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -239,6 +229,8 @@
             android:layout_toEndOf="@+id/editTextThn"
             android:layout_toRightOf="@+id/editTextThn"
             android:text="New Text"
+            android:textColor="@color/abc_background_cache_hint_selector_material_dark"
+            android:textSize="14dp"
             android:textStyle="bold" />
     </LinearLayout>
 </ScrollView>
